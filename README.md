@@ -18,7 +18,7 @@ Generates blank fields and pack of cards with basic functionality to place a car
 
 ## Installation
 
-`npm i solitaireGameInit --save`
+`npm i solitaire-game-init --save`
 
 ## Usage
 
