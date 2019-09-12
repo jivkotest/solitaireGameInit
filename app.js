@@ -1,5 +1,5 @@
 
-function   solitaireGameInit(options) {
+export default function solitaireGameInit(options) {
 
     const blankGrid = document.querySelector(".blank-grid");
     const stockBtn = document.querySelector("#stockBtn");
@@ -99,10 +99,7 @@ function   solitaireGameInit(options) {
             placeholder.className = "card " + `${randomCardSuit}`;
             placeholder.innerHTML = `<p>${randomCardValue}</p><p>${randomCardSuit}</p>`;
             stockBtn.style.pointerEvents = "auto";
-            // presentedCard.style.display = "none";
             presentedCard.remove();
         }        
     });
 }
-
-module.exports. solitaireGameInit =  solitaireGameInit;
