@@ -23,7 +23,7 @@ Generates blank fields and pack of cards with basic functionality to place a car
 ## Usage
 
 ```js
-import { solitaireGameInit } from 'solitaireGameInit';
+import solitaireGameInit from "../node_modules/solitaire-game-init/app.js";
 
 solitaireGameInit({
     suits: ["spades", "clubs", "diamonds", "hearts"],
