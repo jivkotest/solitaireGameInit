@@ -1,13 +1,20 @@
-# New solitaire game initialization npm module
+# Basic functionality for solitaire games
 
-Generates blank fields and pack of cards with basic functionality to place a card in the fields
+This package provides a grid of card placeholders with customizable   
+number of rows and columns.   
+Other customizable options are card suits, values and the number of   
+shuffled cards in the stock
+(a pile of cards, face down, which are left over   
+after setting up the rest of the game).
+
+In your markup you have to provide a button which will pull a new card from the stock   
+to be placed on the choosen card placeholder.
 
 ## Getting Started
 
 ### Prerequisites
 
-* Create empty index.html file in your project
-* The file should have the following HTML tags
+* In index.html file you should have the following HTML markup
 
 ```html
 <div class="blank-grid">
@@ -16,28 +23,42 @@ Generates blank fields and pack of cards with basic functionality to place a car
 </div>
 ```
 
+In script tag you have specify type *module*
+
+```html
+<script type="module" src="app.js"></script>
+```
+
 ## Installation
 
 `npm i solitaire-game-init --save`
 
 ## Usage
 
-```js
-import solitaireGameInit from "../node_modules/solitaire-game-init/app.js";
+Standard French suited deck of 52 cards
 
-solitaireGameInit({
+```js
+import solitaireGameInit from "../node_modules/solitaire-init/app.js";
+
+ solitaireGameInit ({
     suits: ["spades", "clubs", "diamonds", "hearts"],
     values: ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"],
-    rowsCount: "5",
-    colsCount: "5",
-    stockCount: "25"
+    rowsCount: "4",
+    colsCount: "13",
+    stockCount: "52"
 })
 
 ```
 
 ## Options
 
-* Should be considered that new card is presented until the stock is finished (stockCount = rowsCount * colsCount)
+This package supports following required options:
+
+* *suits* - _["spades", "clubs", "diamonds", "hearts"]_ - array of card suits
+* *values* - _["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]_ - array of card values
+* *rowsCount* - _"number"_ - count of rows in the grid
+* *colsCount* - _"number"_ - count of columns in the grid
+* *stockCount* - _"number"_ - count of cards in the stock. New cards will be presented until the stock is finished, thus (stockCount = rowsCount * colsCount)
 
 ## Built With
 
