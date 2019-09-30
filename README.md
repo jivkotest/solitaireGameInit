@@ -43,9 +43,9 @@ import solitaireGameInit from "../node_modules/solitaire-init/app.js";
  solitaireGameInit ({
     suits: ["spades", "clubs", "diamonds", "hearts"],
     values: ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"],
-    rowsCount: "4",
-    colsCount: "13",
-    stockCount: "52"
+    rowsCount: 4,
+    colsCount: 13,
+    stockCount: 52
 })
 
 ```
@@ -56,9 +56,9 @@ This package supports following required options:
 
 * *suits* - _["spades", "clubs", "diamonds", "hearts"]_ - array of card suits
 * *values* - _["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]_ - array of card values
-* *rowsCount* - _"number"_ - count of rows in the grid
-* *colsCount* - _"number"_ - count of columns in the grid
-* *stockCount* - _"number"_ - count of cards in the stock. New cards will be presented until the stock is finished, thus (stockCount = rowsCount * colsCount)
+* *rowsCount* - _number_ - count of rows in the grid
+* *colsCount* - _number_ - count of columns in the grid
+* *stockCount* - _number_ - count of cards in the stock. New cards will be presented until the stock is finished, thus (stockCount = rowsCount * colsCount)
 
 ## Built With
 
