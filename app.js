@@ -5,6 +5,31 @@ export default function solitaireGameInit(options) {
     const stockBtn = document.querySelector("#stockBtn");
     const pack = [];
     let placeholderNumber = 0;
+    
+    if (!(Array.isArray(options.suits)) || (options.suits.length === 0)) {
+        options.suits = ["spades", "clubs", "diamonds", "hearts"];
+        alert("Please, check suits array in your options. Given a default card values");
+    }
+
+    if (!(Array.isArray(options.values)) || (options.values.length === 0)) {
+        options.values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+        alert("Please, check values array in your options. Given a default card values");
+    }
+
+    if (typeof options.rowsCount !== 'number' || !(options.rowsCount >= 1)) {
+        options.rowsCount = '4';
+        alert("Please, check rowsCount options. Given a default value of 4 rows");
+    }
+
+    if (typeof options.colsCount !== 'number' || !(options.colsCount >= 1)) {
+        options.colsCount = '13';
+        alert("Please, check colsCount options. Given a default value of 13 columns");
+    }
+
+    if (typeof options.stockCount !== 'number' || !(options.stockCount >= 1)) {
+        options.stockCount = '52';
+        alert("Please, check stockCount options. Given a default value of 52 cards");
+    }
 
     stockBtn.style.cssText = "width: 150px; height: 45px; background-color: #999;";
     // Generate empty blank-grid 
