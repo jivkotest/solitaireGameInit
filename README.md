@@ -6,6 +6,7 @@ Other customizable options are card suits, values and the number of
 shuffled cards in the stock
 (a pile of cards, face down, which are left over   
 after setting up the rest of the game).
+Once the grid is filled in, an array of the placed cards values is logged in the console.
 
 In your markup you have to provide a button which will pull a new card from the stock   
 to be placed on the choosen card placeholder.
