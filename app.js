@@ -78,6 +78,8 @@ export default function solitaireGameInit(options) {
 
     // Main logic
     stockBtn.addEventListener('click', appendPresentedCard);
+    blankGrid.style.pointerEvents = "none";
+    stockBtn.style.pointerEvents = "auto";
 
     function appendPresentedCard() {
 
@@ -101,7 +103,7 @@ export default function solitaireGameInit(options) {
         presentedCard.style.cssText = "position: absolute; text-align: center; width: 70px; height: 90px;  border: 1px solid #555;"
         const newpresentedCard = document.getElementById("presented-card").appendChild(presentedCard);
 
-        stockBtn.style.pointerEvents = "none";
+        stockBtn.disabled = true;
         blankGrid.style.pointerEvents = "auto";
     }
 
@@ -114,7 +116,7 @@ export default function solitaireGameInit(options) {
         if (target.classList.contains('placeholder')) {
             target.innerHTML = newCard.innerHTML;
             newCard.remove();
-            stockBtn.style.pointerEvents = "auto";
+            stockBtn.disabled = false;
             blankGrid.style.pointerEvents = "none";
             target.style.pointerEvents = "none";
 
